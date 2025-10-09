@@ -67,10 +67,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                               &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S  &kp D     &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp RALT
+&kp TAB    &kp Q               &kp W             &kp E           &kp R               &kp T                                     &mmv MOVE_UP                     &kp Y        &kp U               &kp I           &kp O             &kp P                  &kp BSPC
+&td0       &mt LEFT_CONTROL A  &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LEFT_COMMAND F  &kp G                     &mmv MOVE_LEFT  &kp ENTER       &mmv MOVE_RIGHT  &kp H        &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_SHIFT L  &mt LEFT_CONTROL SEMI  &kp SQT
+&kp LCTRL  &kp Z               &kp X             &kp C           &kp V               &kp B        &kp SPACE                    &mmv MOVE_DOWN                   &kp N        &kp M               &kp COMMA       &kp DOT           &kp FSLH               &kp ESC
+                                                 &kp LGUI        &mo 1               &lt 3 SPACE                                                                &lt 3 ENTER  &mo 2               &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT_BRACKET LEFT_BRACKET>;
