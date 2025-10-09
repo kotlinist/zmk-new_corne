@@ -181,10 +181,10 @@
         layer_number {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp EXCL                    &kp AT                         &kp HASH                &kp DOLLAR                  &kp N5                                         &mmv MOVE_UP                     &kp CARET        &kp AMPS              &kp ASTRK         &kp LEFT_PARENTHESIS     &kp RIGHT_PARENTHESIS  &trans
-&trans  &hmL LEFT_CONTROL NUMBER_1  &hmShiftL LEFT_SHIFT NUMBER_2  &hmL LEFT_ALT NUMBER_3  &hmL LEFT_COMMAND NUMBER_4  &kp N5                         &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp NUMBER_6     &hmR LEFT_COMMAND N7  &hmR LEFT_ALT N8  &hmShiftR LEFT_SHIFT N9  &hmR LEFT_CONTROL N0   &kp PG_UP
-&trans  &rgb_ug RGB_OFF             &rgb_ug RGB_ON                 &trans                  &trans                      &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI       &rgb_ug RGB_BRI   &rgb_ug RGB_BRD          &kp END                &kp PG_DN
-                                                                   &trans                  &trans                      &trans                                                                          &kp BACKSPACE    &kp DEL               &kp TAB
+&trans  &kp EXCL                    &kp AT                         &kp HASH                &kp DOLLAR                  &kp N5                                   &mmv MOVE_Y(200)                     &kp CARET      &kp AMPS              &kp ASTRK         &kp LEFT_PARENTHESIS     &kp RIGHT_PARENTHESIS  &trans
+&trans  &hmL LEFT_CONTROL NUMBER_1  &hmShiftL LEFT_SHIFT NUMBER_2  &hmL LEFT_ALT NUMBER_3  &hmL LEFT_COMMAND NUMBER_4  &kp N5                &mmv MOVE_X(-200)  &mkp LCLK          &mmv MOVE_X(200)  &kp NUMBER_6   &hmR LEFT_COMMAND N7  &hmR LEFT_ALT N8  &hmShiftR LEFT_SHIFT N9  &hmR LEFT_CONTROL N0   &kp PG_UP
+&trans  &trans                      &trans                         &trans                  &trans                      &trans  &kp C_MUTE                       &mmv MOVE_Y(-200)                    &trans         &trans                &trans            &trans                   &kp END                &kp PG_DN
+                                                                   &trans                  &trans                      &trans                                                                        &kp BACKSPACE  &kp DEL               &kp TAB
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -205,9 +205,9 @@
         layer_fn {
             display-name = "Fn";
             bindings = <
-&studio_unlock     &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                                         &mmv MOVE_UP                     &kp F6        &kp F7        &kp F8       &kp F9      &kp F10     &kp F11
-&ext_power EP_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bt BT_SEL 0  &mkp LCLK     &mkp MCLK    &mkp RCLK   &bl BL_INC  &kp F12
-&rgb_ug RGB_TOG    &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp C_MUTE                    &mmv MOVE_DOWN                   &bt BT_SEL 1  &bt BT_SEL 2  &bootloader  &sys_reset  &bl BL_DEC  &bt BT_CLR_ALL
+&studio_unlock     &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                                         &msc SCRL_UP                     &kp F6        &kp F7        &kp F8       &kp F9      &kp F10     &kp F11
+&ext_power EP_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI                &msc SCRL_LEFT  &mkp LCLK       &msc SCRL_RIGHT  &bt BT_SEL 0  &mkp LCLK     &mkp MCLK    &mkp RCLK   &bl BL_INC  &kp F12
+&rgb_ug RGB_TOG    &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp C_MUTE                    &msc SCRL_DOWN                   &bt BT_SEL 1  &bt BT_SEL 2  &bootloader  &sys_reset  &bl BL_DEC  &bt BT_CLR_ALL
                                                      &trans           &trans           &trans                                                                          &trans        &trans        &trans
             >;
 
