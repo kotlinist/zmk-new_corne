@@ -46,7 +46,7 @@ layers:
   - F13
   - NUMBER
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', h: Fn}
+  - {t: '$$mdi:backspace$$', h: Fn}
   - SYMBOL
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   NUMBER:
