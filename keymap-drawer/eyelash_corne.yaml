@@ -31,9 +31,9 @@ layers:
   - {t: '''', s: '"'}
   - '}'
   - Z
-  - X
-  - C
-  - V
+  - {t: X, h: X}
+  - {t: C, h: C}
+  - {t: V, h: V}
   - B
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
@@ -43,10 +43,10 @@ layers:
   - '&dotTD'
   - {t: /, s: '?'}
   - {t: '`', s: '~'}
-  - F13
+  - GLOBE
   - NUMBER
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:backspace$$', h: Fn}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - SYMBOL
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   NUMBER:
@@ -62,7 +62,7 @@ layers:
   - '*'
   - (
   - )
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '2', h: '$$mdi:apple-keyboard-shift$$'}
@@ -95,9 +95,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - INS
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-tab$$
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -161,41 +161,41 @@ layers:
   - F9
   - F10
   - F11
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
-  - '&mkp MB4'
+  - EP TOG
+  - RGB BRI
+  - RGB SPD
+  - RGB SPI
+  - RGB SAD
+  - RGB SAI
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - $$mdi:progress-download$$
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
-  - PRINTSCREEN
+  - '&bl BL_INC'
   - F12
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:progress-download$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB5'
+  - RGB TOG
+  - RGB BRD
+  - RGB EFR
+  - RGB EFF
+  - RGB HUD
+  - RGB HUI
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:progress-download$$
   - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - SCROLLLOCK
-  - PAUSE BREAK
+  - '&bl BL_DEC'
+  - BT CLR ALL
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
 combos:
 - p: [1, 15, 29]
   k: '&soft_off'
