@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - '&backslashDT'
+  - '&backslashTD'
   - '{'
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
@@ -28,7 +28,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ;, h: '$$mdi:apple-keyboard-control$$', s: ':'}
-  - '&quoteDT'
+  - '&quoteTD'
   - '}'
   - Z
   - {t: X, h: X}
@@ -39,11 +39,11 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
-  - '&commaDT'
+  - '&commaTD'
   - '&dotTD'
-  - {t: /, s: '?'}
-  - '&graveDT'
-  - GLOBE
+  - '&slashTD'
+  - '&graveTD'
+  - AC NEXT KEYBOARD LAYOUT SELECT
   - NUMBER
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
