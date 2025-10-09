@@ -184,10 +184,10 @@
         layer_fn {
             display-name = "Fn";
             bindings = <
-&studio_unlock     &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                                         &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10     &kp F11
-&ext_power EP_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &bl BL_INC  &kp F12
-&rgb_ug RGB_TOG    &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &bl BL_DEC  &kp PAUSE_BREAK
-                                                     &trans           &trans           &trans                                                                          &trans       &trans     &trans
+&studio_unlock     &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                                         &mmv MOVE_UP                     &kp F6        &kp F7        &kp F8       &kp F9      &kp F10     &kp F11
+&ext_power EP_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bt BT_SEL 0  &mkp LCLK     &mkp MCLK    &mkp RCLK   &bl BL_INC  &kp F12
+&rgb_ug RGB_TOG    &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp C_MUTE                    &mmv MOVE_DOWN                   &bt BT_SEL 1  &bt BT_SEL 2  &bootloader  &sys_reset  &bl BL_DEC  &bt BT_CLR_ALL
+                                                     &trans           &trans           &trans                                                                          &trans        &trans        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
