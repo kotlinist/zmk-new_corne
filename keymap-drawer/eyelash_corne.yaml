@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: \, s: '|'}
+  - '&backslashDT'
   - '{'
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
@@ -28,7 +28,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ;, h: '$$mdi:apple-keyboard-control$$', s: ':'}
-  - {t: '''', s: '"'}
+  - '&quoteDT'
   - '}'
   - Z
   - {t: X, h: X}
@@ -42,7 +42,7 @@ layers:
   - '&commaDT'
   - '&dotTD'
   - {t: /, s: '?'}
-  - {t: '`', s: '~'}
+  - '&graveDT'
   - GLOBE
   - NUMBER
   - $$mdi:keyboard-space$$
