@@ -108,7 +108,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DOTTD";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
+            bindings = <&kp DOT>, <&kp LS(SEMICOLON)>;
         };
 
         commaDT: commaDT {
@@ -116,6 +116,27 @@
             label = "COMMADT";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
+        };
+
+        graveDT: graveDT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GRAVEDT";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&kp TILDE>;
+        };
+
+        quoteDT: quoteDT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QUOTEDT";
+            #binding-cells = <0>;
+            bindings = <&kp APOSTROPHE>, <&kp DOUBLE_QUOTES>;
+        };
+
+        backslashDT: backslashDT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BACKSLASHDT";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH>, <&kp PIPE>;
         };
     };
 
@@ -148,9 +169,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                                   &mmv MOVE_UP                     &kp Y          &kp U                &kp I            &kp O                   &kp P                   &kp BACKSLASH
-&kp LEFT_BRACE   &hmL LEFT_CONTROL A  &hmShiftL LEFT_SHIFT S  &hmL LEFT_ALT D     &hmL LEFT_COMMAND F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &hmR LEFT_COMMAND J  &hmR LEFT_ALT K  &hmShiftR LEFT_SHIFT L  &hmR LEFT_CONTROL SEMI  &kp SQT
-&kp RIGHT_BRACE  &kp Z                &longPress LG(X) X      &longPress LG(C) C  &longPress LG(V) V   &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N          &kp M                &commaDT         &dotTD                  &kp FSLH                &kp GRAVE
+&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                                   &mmv MOVE_UP                     &kp Y          &kp U                &kp I            &kp O                   &kp P                   &backslashDT
+&kp LEFT_BRACE   &hmL LEFT_CONTROL A  &hmShiftL LEFT_SHIFT S  &hmL LEFT_ALT D     &hmL LEFT_COMMAND F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &hmR LEFT_COMMAND J  &hmR LEFT_ALT K  &hmShiftR LEFT_SHIFT L  &hmR LEFT_CONTROL SEMI  &quoteDT
+&kp RIGHT_BRACE  &kp Z                &longPress LG(X) X      &longPress LG(C) C  &longPress LG(V) V   &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N          &kp M                &commaDT         &dotTD                  &kp FSLH                &graveDT
                                                               &kp GLOBE           &mo 1                &kp SPACE                                                                &kp BACKSPACE  &mo 2                &lt 3 RET
             >;
 
