@@ -21,7 +21,7 @@ layers:
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - H
   - {t: J, h: '$$mdi:apple-keyboard-command$$'}
@@ -39,8 +39,8 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - '&commaDT'
+  - '&dotTD'
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
   - LGUI
