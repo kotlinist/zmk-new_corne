@@ -39,8 +39,8 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
-  - '&commaTD'
-  - '&dotTD'
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
   - '&slashTD'
   - '&graveTD'
   - GLOBE
