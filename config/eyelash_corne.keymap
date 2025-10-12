@@ -43,7 +43,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MINUSTD";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp UNDER>;
+            bindings = <&kp MINUS>, <&kp LS(MINUS)>;
         };
 
         hmShiftR: hmShiftR {
@@ -108,21 +108,21 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DOTTD";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
+            bindings = <&kp DOT>, <&kp LS(SEMI)>;
         };
 
         commaTD: commaTD {
             compatible = "zmk,behavior-tap-dance";
             label = "COMMATD";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp COLON>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
         };
 
         graveTD: graveTD {
             compatible = "zmk,behavior-tap-dance";
             label = "GRAVETD";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&kp TILDE>;
+            bindings = <&kp GRAVE>, <&kp LS(GRAVE)>;
         };
 
         quoteTD: quoteTD {
@@ -136,7 +136,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BACKSLASHTD";
             #binding-cells = <0>;
-            bindings = <&kp BACKSLASH>, <&kp PIPE>;
+            bindings = <&kp BACKSLASH>, <&kp LS(BACKSLASH)>;
         };
 
         slashTD: slashTD {
@@ -150,7 +150,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "EQUALTD";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp PLUS>;
+            bindings = <&kp EQUAL>, <&kp LS(EQUAL)>;
         };
 
         langTD: langTD {
@@ -158,6 +158,25 @@
             label = "LANGTD";
             #binding-cells = <0>;
             bindings = <&switchLang>, <&doubleShift>, <&kp CAPS>;
+        };
+
+        colonTD: colonTD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COLONTD";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp LS(SEMICOLON)>;
+        };
+
+        hmRb: hmRb {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMRB";
+            bindings = <&kp>, <&colonTD>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34 42 43 44>;
+            hold-trigger-on-release;
+            flavor = "tap-preferred";
         };
     };
 
@@ -218,9 +237,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                                   &mmv MOVE_UP                     &kp Y          &kp U                &kp I            &kp O                   &kp P                   &backslashTD
-&kp LEFT_BRACE   &hmL LEFT_CONTROL A  &hmShiftL LEFT_SHIFT S  &hmL LEFT_ALT D     &hmL LEFT_COMMAND F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &hmR LEFT_COMMAND J  &hmR LEFT_ALT K  &hmShiftR LEFT_SHIFT L  &hmR LEFT_CONTROL SEMI  &quoteTD
-&kp RIGHT_BRACE  &kp Z                &longPress LG(X) X      &longPress LG(C) C  &longPress LG(V) V   &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N          &kp M                &kp COMMA        &kp DOT                 &slashTD                &graveTD
+&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                                   &mmv MOVE_UP                     &kp Y          &kp U                &kp I            &kp O                   &kp P                 &backslashTD
+&kp LEFT_BRACE   &hmL LEFT_CONTROL A  &hmShiftL LEFT_SHIFT S  &hmL LEFT_ALT D     &hmL LEFT_COMMAND F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &hmR LEFT_COMMAND J  &hmR LEFT_ALT K  &hmShiftR LEFT_SHIFT L  &hmRb LEFT_CONTROL 0  &quoteTD
+&kp RIGHT_BRACE  &kp Z                &longPress LG(X) X      &longPress LG(C) C  &longPress LG(V) V   &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N          &kp M                &commaTD         &dotTD                  &slashTD              &graveTD
                                                               &langTD             &mo 1                &kp SPACE                                                                &kp BACKSPACE  &mo 2                &lt 3 RET
             >;
 
@@ -230,10 +249,10 @@
         layer_number {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp EXCL                    &kp AT                         &kp HASH                &kp DOLLAR                  &kp N5                                   &mmv MOVE_Y(200)                     &kp CARET      &kp AMPS              &kp ASTRK         &kp LEFT_PARENTHESIS     &kp RIGHT_PARENTHESIS  &trans
-&trans  &hmL LEFT_CONTROL NUMBER_1  &hmShiftL LEFT_SHIFT NUMBER_2  &hmL LEFT_ALT NUMBER_3  &hmL LEFT_COMMAND NUMBER_4  &kp N5                &mmv MOVE_X(-200)  &mkp LCLK          &mmv MOVE_X(200)  &kp NUMBER_6   &hmR LEFT_COMMAND N7  &hmR LEFT_ALT N8  &hmShiftR LEFT_SHIFT N9  &hmR LEFT_CONTROL N0   &kp PG_UP
-&trans  &trans                      &trans                         &trans                  &trans                      &trans  &kp C_MUTE                       &mmv MOVE_Y(-200)                    &trans         &trans                &trans            &trans                   &kp END                &kp PG_DN
-                                                                   &trans                  &trans                      &trans                                                                        &kp BACKSPACE  &kp DEL               &kp TAB
+&trans  &kp LS(NUMBER_1)            &kp LS(NUMBER_2)               &kp LS(NUMBER_3)        &kp LS(NUMBER_4)            &kp LS(NUMBER_5)                                   &mmv MOVE_Y(200)                     &kp LS(NUMBER_6)  &kp LS(NUMBER_7)      &kp LS(NUMBER_8)  &kp LS(NUMBER_9)         &kp LS(NUMBER_0)      &trans
+&trans  &hmL LEFT_CONTROL NUMBER_1  &hmShiftL LEFT_SHIFT NUMBER_2  &hmL LEFT_ALT NUMBER_3  &hmL LEFT_COMMAND NUMBER_4  &kp N5                          &mmv MOVE_X(-200)  &mkp LCLK          &mmv MOVE_X(200)  &kp NUMBER_6      &hmR LEFT_COMMAND N7  &hmR LEFT_ALT N8  &hmShiftR LEFT_SHIFT N9  &hmR LEFT_CONTROL N0  &trans
+&trans  &trans                      &trans                         &trans                  &trans                      &trans            &kp C_MUTE                       &mmv MOVE_Y(-200)                    &trans            &trans                &trans            &trans                   &trans                &trans
+                                                                   &trans                  &trans                      &trans                                                                                  &kp BACKSPACE     &kp DEL               &kp TAB
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -242,10 +261,10 @@
         layer_symbol {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL          &kp AT          &kp HASH      &kp DLLR          &kp PRCNT                               &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &kp BSPC
-&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp CAPSLOCK            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &kp HOME  &kp PAGE_UP
-&trans  &out OUT_USB      &out OUT_BLE    &trans        &trans            &trans        &trans                    &mmv MOVE_DOWN                   &minusTD   &equalTD  &kp LBRC   &kp RBRC   &kp END   &kp PAGE_DOWN
-                                          &trans        &trans            &kp SPACE                                                                &kp RET    &trans    &trans
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                            &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &none
+&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp LEFT_ALT      &kp LEFT_COMMAND  &kp CAPSLOCK                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &kp HOME  &kp PAGE_UP
+&trans  &out OUT_USB      &out OUT_BLE      &trans            &trans            &trans            &trans                    &mmv MOVE_DOWN                   &minusTD   &equalTD  &kp COMMA  &kp DOT    &kp END   &kp PAGE_DOWN
+                                            &trans            &trans            &kp SPACE                                                                    &kp RET    &trans    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
