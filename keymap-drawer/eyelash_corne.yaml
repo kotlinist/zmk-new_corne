@@ -43,7 +43,7 @@ layers:
   - {t: ., s: '>'}
   - '&slashTD'
   - '&graveTD'
-  - GLOBE
+  - '&langTD'
   - NUMBER
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
