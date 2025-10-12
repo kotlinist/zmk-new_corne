@@ -108,35 +108,49 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DOTTD";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp LS(SEMICOLON)>;
+            bindings = <&kp DOT>, <&kp COLON>;
         };
 
-        commaDT: commaDT {
+        commaTD: commaTD {
             compatible = "zmk,behavior-tap-dance";
-            label = "COMMADT";
+            label = "COMMATD";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&kp COLON>;
         };
 
-        graveDT: graveDT {
+        graveTD: graveTD {
             compatible = "zmk,behavior-tap-dance";
-            label = "GRAVEDT";
+            label = "GRAVETD";
             #binding-cells = <0>;
             bindings = <&kp GRAVE>, <&kp TILDE>;
         };
 
-        quoteDT: quoteDT {
+        quoteTD: quoteTD {
             compatible = "zmk,behavior-tap-dance";
-            label = "QUOTEDT";
+            label = "QUOTETD";
             #binding-cells = <0>;
-            bindings = <&kp APOSTROPHE>, <&kp DOUBLE_QUOTES>;
+            bindings = <&kp APOS>, <&kp LS(APOS)>;
         };
 
-        backslashDT: backslashDT {
+        backslashTD: backslashTD {
             compatible = "zmk,behavior-tap-dance";
-            label = "BACKSLASHDT";
+            label = "BACKSLASHTD";
             #binding-cells = <0>;
             bindings = <&kp BACKSLASH>, <&kp PIPE>;
+        };
+
+        slashTD: slashTD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SLASHTD";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp LS(SLASH)>;
+        };
+
+        equalTD: equalTD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "EQUALTD";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp PLUS>;
         };
     };
 
@@ -169,9 +183,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                                   &mmv MOVE_UP                     &kp Y          &kp U                &kp I            &kp O                   &kp P                   &backslashDT
-&kp LEFT_BRACE   &hmL LEFT_CONTROL A  &hmShiftL LEFT_SHIFT S  &hmL LEFT_ALT D     &hmL LEFT_COMMAND F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &hmR LEFT_COMMAND J  &hmR LEFT_ALT K  &hmShiftR LEFT_SHIFT L  &hmR LEFT_CONTROL SEMI  &quoteDT
-&kp RIGHT_BRACE  &kp Z                &longPress LG(X) X      &longPress LG(C) C  &longPress LG(V) V   &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N          &kp M                &commaDT         &dotTD                  &kp FSLH                &graveDT
+&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                                   &mmv MOVE_UP                     &kp Y          &kp U                &kp I            &kp O                   &kp P                   &backslashTD
+&kp LEFT_BRACE   &hmL LEFT_CONTROL A  &hmShiftL LEFT_SHIFT S  &hmL LEFT_ALT D     &hmL LEFT_COMMAND F  &kp G                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &hmR LEFT_COMMAND J  &hmR LEFT_ALT K  &hmShiftR LEFT_SHIFT L  &hmR LEFT_CONTROL SEMI  &quoteTD
+&kp RIGHT_BRACE  &kp Z                &longPress LG(X) X      &longPress LG(C) C  &longPress LG(V) V   &kp B      &kp SPACE                    &mmv MOVE_DOWN                   &kp N          &kp M                &kp COMMA        &kp DOT                 &slashTD                &graveTD
                                                               &kp GLOBE           &mo 1                &kp SPACE                                                                &kp BACKSPACE  &mo 2                &lt 3 RET
             >;
 
@@ -193,10 +207,10 @@
         layer_symbol {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp HOME  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp MINUS  &kp EQUAL  &kp LBRC   &kp RBRC   &kp END   &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+&trans  &kp EXCL          &kp AT          &kp HASH      &kp DLLR          &kp PRCNT                               &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &kp BSPC
+&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp CAPSLOCK            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &kp HOME  &kp PAGE_UP
+&trans  &out OUT_USB      &out OUT_BLE    &none         &none             &mkp MB5      &trans                    &mmv MOVE_DOWN                   &minusTD   &equalTD  &kp LBRC   &kp RBRC   &kp END   &kp PAGE_DOWN
+                                          &trans        &trans            &kp SPACE                                                                &kp RET    &trans    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
