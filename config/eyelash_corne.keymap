@@ -152,6 +152,13 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp PLUS>;
         };
+
+        langTD: langTD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LANGTD";
+            #binding-cells = <0>;
+            bindings = <&switchLang>, <&doubleShift>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -174,6 +181,34 @@
         softoff {
             bindings = <&soft_off>;
             key-positions = <1 15 29>;
+        };
+    };
+
+    macros {
+        switchLang: switchLang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "SWITCHLANG";
+            wait-ms = <20>;
+            tap-ms = <20>;
+        };
+
+        doubleShift: doubleShift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_SHIFT &kp LEFT_SHIFT>;
+
+            label = "DOUBLESHIFT";
+            wait-ms = <20>;
+            tap-ms = <20>;
         };
     };
 
