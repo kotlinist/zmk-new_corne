@@ -157,7 +157,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LANGTD";
             #binding-cells = <0>;
-            bindings = <&switchLang>, <&doubleShift>;
+            bindings = <&switchLang>, <&doubleShift>, <&kp CAPS>;
         };
     };
 
@@ -242,10 +242,10 @@
         layer_symbol {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL          &kp AT          &kp HASH                  &kp DLLR                              &kp PRCNT                               &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &kp BSPC
-&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT              &kp LEFT_COMMAND                      &kp CAPSLOCK            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &kp HOME  &kp PAGE_UP
-&trans  &out OUT_USB      &out OUT_BLE    &kp C_AL_KEYBOARD_LAYOUT  &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &kp GLOBE     &trans                    &mmv MOVE_DOWN                   &minusTD   &equalTD  &kp LBRC   &kp RBRC   &kp END   &kp PAGE_DOWN
-                                          &trans                    &trans                                &kp SPACE                                                                &kp RET    &trans    &trans
+&trans  &kp EXCL          &kp AT          &kp HASH      &kp DLLR          &kp PRCNT                               &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &kp BSPC
+&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp CAPSLOCK            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &kp HOME  &kp PAGE_UP
+&trans  &out OUT_USB      &out OUT_BLE    &trans        &trans            &trans        &trans                    &mmv MOVE_DOWN                   &minusTD   &equalTD  &kp LBRC   &kp RBRC   &kp END   &kp PAGE_DOWN
+                                          &trans        &trans            &kp SPACE                                                                &kp RET    &trans    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -254,9 +254,9 @@
         layer_fn {
             display-name = "Fn";
             bindings = <
-&studio_unlock     &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                                         &msc SCRL_UP                     &kp F6        &kp F7        &kp F8       &kp F9      &kp F10     &kp F11
-&ext_power EP_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI                &msc SCRL_LEFT  &mkp LCLK       &msc SCRL_RIGHT  &bt BT_SEL 0  &mkp LCLK     &mkp MCLK    &mkp RCLK   &bl BL_INC  &kp F12
-&rgb_ug RGB_TOG    &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp C_MUTE                    &msc SCRL_DOWN                   &bt BT_SEL 1  &bt BT_SEL 2  &bootloader  &sys_reset  &bl BL_DEC  &bt BT_CLR_ALL
+&studio_unlock     &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                                         &msc SCRL_UP                     &kp F6        &kp F7        &kp F8        &kp F9      &kp F10      &kp F11
+&ext_power EP_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI                &msc SCRL_LEFT  &mkp LCLK       &msc SCRL_RIGHT  &bt BT_SEL 0  &mkp LCLK     &mkp MCLK     &mkp RCLK   &bl BL_INC   &kp F12
+&rgb_ug RGB_TOG    &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp C_MUTE                    &msc SCRL_DOWN                   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &sys_reset  &bootloader  &bt BT_CLR_ALL
                                                      &trans           &trans           &trans                                                                          &trans        &trans        &trans
             >;
 
