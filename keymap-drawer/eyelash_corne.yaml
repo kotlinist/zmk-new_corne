@@ -28,7 +28,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '&colonTD', h: '$$mdi:apple-keyboard-control$$'}
-  - '&quoteTD'
+  - .
   - '}'
   - Z
   - {t: X, h: X}
@@ -39,10 +39,10 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
-  - '&commaTD'
-  - '&dotTD'
-  - '&slashTD'
-  - '&graveTD'
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - {t: '`', s: '~'}
   - '&langTD'
   - NUMBER
   - $$mdi:keyboard-space$$
