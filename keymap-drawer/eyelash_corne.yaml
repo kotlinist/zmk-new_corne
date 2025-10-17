@@ -137,8 +137,8 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&minusTD'
   - '&equalTD'
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - Ctl+KP COMMA
+  - KP DOT
   - END
   - PgDn
   - {t: '$$mdi:transfer$$', type: trans}
