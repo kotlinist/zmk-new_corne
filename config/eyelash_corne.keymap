@@ -180,6 +180,20 @@
             hold-trigger-on-release;
             flavor = "tap-preferred";
         };
+
+        sendDot: sendDot {
+            compatible = "zmk,behavior-send-string";
+            label = "SENDDOT";
+            #binding-cells = <0>;
+            text = ".";
+        };
+
+        sendComma: sendComma {
+            compatible = "zmk,behavior-send-string";
+            label = "SENDCOMMA";
+            #binding-cells = <0>;
+            text = ",";
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -253,10 +267,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                             &kp UP                &kp Y          &kp U                &kp I            &kp O                   &kp P                 &backslashTD
-&kp LEFT_BRACE   &hmL LEFT_CONTROL A  &hmShiftL LEFT_SHIFT S  &hmL LEFT_ALT D     &hmL LEFT_COMMAND F  &kp G                   &kp LEFT  &mkp LCLK  &kp RIGHT  &kp H          &hmR LEFT_COMMAND J  &hmR LEFT_ALT K  &hmShiftR LEFT_SHIFT L  &hmRb LEFT_CONTROL 0  &kp APOS
-&kp RIGHT_BRACE  &kp Z                &longPress LG(X) X      &longPress LG(C) C  &longPress LG(V) V   &kp B      &kp SPACE              &kp DOWN              &kp N          &kp M                &kp COMMA        &kp DOT                 &kp SLASH             &kp GRAVE
-                                                              &langTD             &mo 1                &kp SPACE                                               &kp BACKSPACE  &mo 2                &lt 3 RET
+&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                             &kp UP               &kp Y          &kp U                &kp I            &kp O                   &kp P                 &backslashTD
+&kp LEFT_BRACE   &hmL LEFT_CONTROL A  &hmShiftL LEFT_SHIFT S  &hmL LEFT_ALT D     &hmL LEFT_COMMAND F  &kp G                   &kp LEFT  &none     &kp RIGHT  &kp H          &hmR LEFT_COMMAND J  &hmR LEFT_ALT K  &hmShiftR LEFT_SHIFT L  &hmRb LEFT_CONTROL 0  &kp APOS
+&kp RIGHT_BRACE  &kp Z                &longPress LG(X) X      &longPress LG(C) C  &longPress LG(V) V   &kp B      &kp SPACE              &kp DOWN             &kp N          &kp M                &kp COMMA        &kp DOT                 &kp SLASH             &kp GRAVE
+                                                              &langTD             &mo 1                &kp SPACE                                              &kp BACKSPACE  &mo 2                &lt 3 RET
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT_BRACKET LEFT_BRACKET>;
