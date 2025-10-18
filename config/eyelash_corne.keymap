@@ -158,6 +158,8 @@
             label = "LANGTD";
             #binding-cells = <0>;
             bindings = <&switchLang>, <&doubleShift>, <&kp CAPS>;
+
+            tapping-term-ms = <300>;
         };
 
         colonTD: colonTD {
@@ -229,6 +231,20 @@
             wait-ms = <20>;
             tap-ms = <20>;
         };
+
+        comma_macro: comma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>;
+            label = "COMMA";
+        };
+
+        dot_macro: dot_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>;
+            label = "DOT_MACRO";
+        };
     };
 
     keymap {
@@ -261,9 +277,9 @@
         layer_symbol {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                            &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp ASTRK         &kp LPAR    &kp RPAR  &none
-&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp LEFT_ALT      &kp LEFT_COMMAND  &kp CAPSLOCK                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN  &kp UP            &kp RIGHT   &kp HOME  &kp PAGE_UP
-&trans  &out OUT_USB      &out OUT_BLE      &trans            &trans            &trans            &trans                    &mmv MOVE_DOWN                   &minusTD   &equalTD  &kp LC(KP_COMMA)  &kp KP_DOT  &kp END   &kp PAGE_DOWN
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                            &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp ASTRK     &kp LPAR    &kp RPAR  &none
+&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp LEFT_ALT      &kp LEFT_COMMAND  &kp CAPSLOCK                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN  &kp UP        &kp RIGHT   &kp HOME  &kp PAGE_UP
+&trans  &out OUT_USB      &out OUT_BLE      &trans            &trans            &trans            &trans                    &mmv MOVE_DOWN                   &minusTD   &equalTD  &comma_macro  &dot_macro  &kp END   &kp PAGE_DOWN
                                             &trans            &trans            &kp SPACE                                                                    &kp RET    &trans    &trans
             >;
 
