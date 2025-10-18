@@ -21,7 +21,7 @@ layers:
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
   - $$mdi:arrow-left-bold$$
-  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-right-bold$$
   - H
   - {t: J, h: '$$mdi:apple-keyboard-command$$'}
