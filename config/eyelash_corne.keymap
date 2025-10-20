@@ -267,7 +267,7 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                             &kp UP               &kp Y          &kp U                &kp I            &kp O                   &kp P                 &backslashTD
+&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                             &kp UP               &kp Y          &kp U                &kp I            &kp O                   &kp P                 &kp BACKSLASH
 &kp LEFT_BRACE   &hmL LEFT_CONTROL A  &hmShiftL LEFT_SHIFT S  &hmL LEFT_ALT D     &hmL LEFT_COMMAND F  &kp G                   &kp LEFT  &none     &kp RIGHT  &kp H          &hmR LEFT_COMMAND J  &hmR LEFT_ALT K  &hmShiftR LEFT_SHIFT L  &hmRb LEFT_CONTROL 0  &kp APOS
 &kp RIGHT_BRACE  &kp Z                &longPress LG(X) X      &longPress LG(C) C  &longPress LG(V) V   &kp B      &kp SPACE              &kp DOWN             &kp N          &kp M                &kp COMMA        &kp DOT                 &kp SLASH             &kp GRAVE
                                                               &langTD             &mo 1                &kp SPACE                                              &kp BACKSPACE  &mo 2                &lt 3 RET
@@ -291,10 +291,10 @@
         layer_symbol {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                            &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &none
-&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp LEFT_ALT      &kp LEFT_COMMAND  &kp CAPSLOCK                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &kp HOME  &kp PAGE_UP
-&trans  &out OUT_USB      &out OUT_BLE      &trans            &trans            &trans            &trans                    &mmv MOVE_DOWN                   &minusTD   &equalTD  &kp COMMA  &kp DOT    &kp END   &kp PAGE_DOWN
-                                            &trans            &trans            &kp SPACE                                                                    &kp RET    &trans    &trans
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR  &none
+&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp LEFT_ALT      &kp LEFT_COMMAND  &kp CAPSLOCK                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp HOME  &kp PAGE_UP
+&trans  &out OUT_USB      &out OUT_BLE      &trans            &trans            &trans            &trans                    &mmv MOVE_DOWN                   &kp MINUS  &kp EQUAL  &kp COMMA  &kp DOT    &kp END   &kp PAGE_DOWN
+                                            &trans            &trans            &kp SPACE                                                                    &kp RET    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
