@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - '&backslashTD'
+  - {t: \, s: '|'}
   - '{'
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
@@ -135,8 +135,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - '&minusTD'
-  - '&equalTD'
+  - {t: '-', s: _}
+  - {t: '=', s: +}
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - END
