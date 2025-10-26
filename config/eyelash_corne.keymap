@@ -232,8 +232,8 @@
                 <&kp LEFT_CONTROL>;
 
             label = "SWITCHLANG";
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <10>;
+            tap-ms = <10>;
         };
 
         doubleShift: doubleShift {
