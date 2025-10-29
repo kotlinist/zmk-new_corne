@@ -279,10 +279,10 @@
         layer_number {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp LS(N1)                  &kp LS(N2)                     &kp LS(NUMBER_3)        &kp LS(N4)                  &kp LS(N5)                                   &mmv MOVE_Y(200)                     &kp LS(N6)     &kp LS(N7)            &kp LS(N8)        &kp LS(N9)               &kp LS(N0)            &trans
-&trans  &hmL LEFT_CONTROL NUMBER_1  &hmShiftL LEFT_SHIFT NUMBER_2  &hmL LEFT_ALT NUMBER_3  &hmL LEFT_COMMAND NUMBER_4  &kp N5                    &mmv MOVE_X(-200)  &mkp LCLK          &mmv MOVE_X(200)  &kp NUMBER_6   &hmR LEFT_COMMAND N7  &hmR LEFT_ALT N8  &hmShiftR LEFT_SHIFT N9  &hmR LEFT_CONTROL N0  &trans
-&trans  &trans                      &trans                         &trans                  &trans                      &trans      &kp C_MUTE                       &mmv MOVE_Y(-200)                    &trans         &trans                &trans            &trans                   &trans                &trans
-                                                                   &trans                  &trans                      &trans                                                                            &kp BACKSPACE  &kp DEL               &kp TAB
+&trans  &kp LS(N1)                  &kp LS(N2)                     &kp LS(NUMBER_3)        &kp LS(N4)                  &kp LS(N5)                                   &mmv MOVE_Y(200)                     &kp LS(N6)    &kp LS(N7)            &kp LS(N8)        &kp LS(N9)               &kp LS(N0)            &trans
+&trans  &hmL LEFT_CONTROL NUMBER_1  &hmShiftL LEFT_SHIFT NUMBER_2  &hmL LEFT_ALT NUMBER_3  &hmL LEFT_COMMAND NUMBER_4  &kp N5                    &mmv MOVE_X(-200)  &mkp LCLK          &mmv MOVE_X(200)  &kp NUMBER_6  &hmR LEFT_COMMAND N7  &hmR LEFT_ALT N8  &hmShiftR LEFT_SHIFT N9  &hmR LEFT_CONTROL N0  &trans
+&trans  &trans                      &trans                         &trans                  &trans                      &trans      &kp C_MUTE                       &mmv MOVE_Y(-200)                    &trans        &trans                &trans            &trans                   &trans                &trans
+                                                                   &trans                  &trans                      &trans                                                                            &kp DEL       &none                 &kp TAB
             >;
 
             sensor-bindings = <&scroll_encoder>;
