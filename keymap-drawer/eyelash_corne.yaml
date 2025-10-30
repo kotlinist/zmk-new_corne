@@ -7,7 +7,7 @@ layers:
   - E
   - R
   - T
-  - $$mdi:arrow-up-bold$$
+  - Hyper+$$mdi:arrow-up-bold$$
   - Y
   - U
   - I
@@ -20,9 +20,9 @@ layers:
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
-  - $$mdi:arrow-left-bold$$
+  - Hyper+$$mdi:arrow-left-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:arrow-right-bold$$
+  - Hyper+$$mdi:arrow-right-bold$$
   - H
   - {t: J, h: '$$mdi:apple-keyboard-command$$'}
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
@@ -36,7 +36,7 @@ layers:
   - {t: V, h: V}
   - B
   - $$mdi:keyboard-space$$
-  - $$mdi:arrow-down-bold$$
+  - Hyper+$$mdi:arrow-down-bold$$
   - N
   - M
   - {t: ',', s: <}
