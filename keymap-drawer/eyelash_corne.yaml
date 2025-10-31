@@ -168,7 +168,7 @@ layers:
   - RGB SAD
   - RGB SAI
   - $$mdi:pan-left$$
-  - $$mdi:mouse-left-click-outline$$
+  - BT CLR ALL
   - $$mdi:pan-right$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:mouse-left-click-outline$$
@@ -189,7 +189,7 @@ layers:
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - $$mdi:progress-download$$
-  - BT CLR ALL
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
