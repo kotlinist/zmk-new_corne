@@ -159,7 +159,7 @@
             #binding-cells = <0>;
             bindings = <&switchLang>, <&doubleShift>, <&kp CAPS>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
         };
 
         colonTD: colonTD {
