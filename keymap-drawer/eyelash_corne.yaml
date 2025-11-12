@@ -43,7 +43,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '`', s: '~'}
-  - {t: '&langTD', h: F14}
+  - {t: '&langTD', h: F16}
   - NUMBER
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
