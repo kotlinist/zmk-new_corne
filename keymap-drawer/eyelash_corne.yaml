@@ -79,11 +79,11 @@ layers:
   - {t: '0', h: '$$mdi:apple-keyboard-control$$', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - F16
+  - F17
+  - F18
+  - F19
+  - F20
   - $$mdi:volume-off$$
   - Hyper+$$mdi:arrow-down-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
