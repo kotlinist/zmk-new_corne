@@ -194,6 +194,17 @@
             #binding-cells = <0>;
             text = ",";
         };
+
+        langHoldTap: langHoldTap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LANGHOLDTAP";
+            bindings = <&kp>, <&langTD>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -267,10 +278,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                                             &kp LS(LA(LC(LG(UP))))                               &kp Y          &kp U                &kp I            &kp O                   &kp P                 &kp BACKSLASH
-&kp LEFT_BRACE   &hmL LEFT_CONTROL A  &hmShiftL LEFT_SHIFT S  &hmL LEFT_ALT D     &hmL LEFT_COMMAND F  &kp G                   &kp LS(LA(LC(LG(LEFT))))  &none                     &kp LS(LA(LG(LC(RIGHT))))  &kp H          &hmR LEFT_COMMAND J  &hmR LEFT_ALT K  &hmShiftR LEFT_SHIFT L  &hmRb LEFT_CONTROL 0  &kp APOS
-&kp RIGHT_BRACE  &kp Z                &longPress LG(X) X      &longPress LG(C) C  &longPress LG(V) V   &kp B      &kp SPACE                              &kp LS(LA(LC(LG(DOWN))))                             &kp N          &kp M                &kp COMMA        &kp DOT                 &kp SLASH             &kp GRAVE
-                                                              &langTD             &mo 1                &kp SPACE                                                                                              &kp BACKSPACE  &mo 2                &lt 3 RET
+&kp ESC          &kp Q                &kp W                   &kp E               &kp R                &kp T                             &kp UP               &kp Y          &kp U                &kp I            &kp O                   &kp P                 &kp BACKSLASH
+&kp LEFT_BRACE   &hmL LEFT_CONTROL A  &hmShiftL LEFT_SHIFT S  &hmL LEFT_ALT D     &hmL LEFT_COMMAND F  &kp G                   &kp LEFT  &none     &kp RIGHT  &kp H          &hmR LEFT_COMMAND J  &hmR LEFT_ALT K  &hmShiftR LEFT_SHIFT L  &hmRb LEFT_CONTROL 0  &kp APOS
+&kp RIGHT_BRACE  &kp Z                &longPress LG(X) X      &longPress LG(C) C  &longPress LG(V) V   &kp B      &kp SPACE              &kp DOWN             &kp N          &kp M                &kp COMMA        &kp DOT                 &kp SLASH             &kp GRAVE
+                                                              &langHoldTap F14 0  &mo 1                &kp SPACE                                              &kp BACKSPACE  &mo 2                &lt 3 RET
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT_BRACKET LEFT_BRACKET>;
@@ -279,10 +290,10 @@
         layer_number {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp LS(N1)                  &kp LS(N2)                     &kp LS(NUMBER_3)        &kp LS(N4)                  &kp LS(N5)                                   &mmv MOVE_Y(200)                     &kp LS(N6)    &kp LS(N7)            &kp LS(N8)        &kp LS(N9)               &kp LS(N0)            &trans
-&trans  &hmL LEFT_CONTROL NUMBER_1  &hmShiftL LEFT_SHIFT NUMBER_2  &hmL LEFT_ALT NUMBER_3  &hmL LEFT_COMMAND NUMBER_4  &kp N5                    &mmv MOVE_X(-200)  &mkp LCLK          &mmv MOVE_X(200)  &kp NUMBER_6  &hmR LEFT_COMMAND N7  &hmR LEFT_ALT N8  &hmShiftR LEFT_SHIFT N9  &hmR LEFT_CONTROL N0  &trans
-&trans  &trans                      &trans                         &trans                  &trans                      &trans      &kp C_MUTE                       &mmv MOVE_Y(-200)                    &trans        &trans                &trans            &trans                   &trans                &trans
-                                                                   &trans                  &trans                      &trans                                                                            &kp DEL       &none                 &kp TAB
+&trans  &kp EXCLAMATION             &kp AT_SIGN                    &kp HASH                &kp DLLR                    &kp PERCENT                                          &kp LC(LG(LA(LS(UP))))                               &kp CARET     &kp AMPS              &kp STAR          &kp LPAR                 &kp RPAR              &trans
+&trans  &hmL LEFT_CONTROL NUMBER_1  &hmShiftL LEFT_SHIFT NUMBER_2  &hmL LEFT_ALT NUMBER_3  &hmL LEFT_COMMAND NUMBER_4  &kp N5                     &kp LS(LA(LC(LG(LEFT))))  &mkp LCLK                 &kp LS(LA(LC(LG(RIGHT))))  &kp NUMBER_6  &hmR LEFT_COMMAND N7  &hmR LEFT_ALT N8  &hmShiftR LEFT_SHIFT N9  &hmR LEFT_CONTROL N0  &trans
+&trans  &trans                      &trans                         &trans                  &trans                      &trans       &kp C_MUTE                              &kp LS(LA(LC(LG(DOWN))))                             &trans        &trans                &trans            &trans                   &trans                &trans
+                                                                   &trans                  &trans                      &trans                                                                                                    &kp DEL       &none                 &kp TAB
             >;
 
             sensor-bindings = <&scroll_encoder>;
