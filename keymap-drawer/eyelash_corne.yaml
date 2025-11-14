@@ -7,7 +7,7 @@ layers:
   - E
   - R
   - T
-  - Hyper+$$mdi:arrow-up-bold$$
+  - $$mdi:arrow-up-bold$$
   - Y
   - U
   - I
@@ -20,9 +20,9 @@ layers:
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
-  - Hyper+$$mdi:arrow-left-bold$$
+  - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Hyper+$$mdi:arrow-right-bold$$
+  - $$mdi:arrow-right-bold$$
   - H
   - {t: J, h: '$$mdi:apple-keyboard-command$$'}
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
@@ -36,14 +36,14 @@ layers:
   - {t: V, h: V}
   - B
   - $$mdi:keyboard-space$$
-  - Hyper+$$mdi:arrow-down-bold$$
+  - $$mdi:arrow-down-bold$$
   - N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '`', s: '~'}
-  - '&langTD'
+  - {t: '&langTD', h: F16}
   - NUMBER
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -51,17 +51,17 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Sft+1, s: Sft+!}
-  - {t: Sft+2, s: Sft+@}
-  - Sft+3
-  - {t: Sft+4, s: Sft+$}
-  - {t: Sft+5, s: Sft+%}
-  - '&mmv MOVE_Y(200)'
-  - {t: Sft+6, s: Sft+^}
-  - {t: Sft+7, s: Sft+&}
-  - {t: Sft+8, s: Sft+*}
-  - {t: Sft+9, s: Sft+(}
-  - {t: Sft+0, s: Sft+)}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - Hyper+$$mdi:arrow-up-bold$$
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', h: '$$mdi:apple-keyboard-control$$'}
@@ -69,9 +69,9 @@ layers:
   - {t: '3', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '4', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '5', s: '%'}
-  - '&mmv MOVE_X(-200)'
+  - Hyper+$$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
-  - '&mmv MOVE_X(200)'
+  - Hyper+$$mdi:arrow-right-bold$$
   - '6'
   - {t: '7', h: '$$mdi:apple-keyboard-command$$', s: '&'}
   - {t: '8', h: '$$mdi:apple-keyboard-option$$', s: '*'}
@@ -79,13 +79,13 @@ layers:
   - {t: '0', h: '$$mdi:apple-keyboard-control$$', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - F16
+  - F17
+  - F18
+  - F19
+  - F20
   - $$mdi:volume-off$$
-  - '&mmv MOVE_Y(-200)'
+  - Hyper+$$mdi:arrow-down-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
