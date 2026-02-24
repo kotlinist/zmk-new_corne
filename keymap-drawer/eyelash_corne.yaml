@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - {t: \, s: '|'}
-  - '{'
+  - {t: '[', s: '{'}
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
@@ -29,7 +29,7 @@ layers:
   - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '&colonTD', h: '$$mdi:apple-keyboard-control$$'}
   - .
-  - '}'
+  - {t: ']', s: '}'}
   - Z
   - {t: X, h: X}
   - {t: C, h: C}
