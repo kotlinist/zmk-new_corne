@@ -30,10 +30,10 @@ layers:
   - {t: '&colonTD', h: '$$mdi:apple-keyboard-control$$'}
   - .
   - {t: ']', s: '}'}
-  - Z
-  - {t: X, h: X}
-  - {t: C, h: C}
-  - {t: V, h: V}
+  - {t: Z, h: '&tapOnce LG(TAB)'}
+  - {t: X, h: '&tapOnce LG(GRAVE)'}
+  - {t: C, h: '&tapOnce LG(C)'}
+  - {t: V, h: '&tapOnce LG(V)'}
   - B
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
