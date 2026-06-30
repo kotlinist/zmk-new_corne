@@ -34,7 +34,7 @@ layers:
   - {t: X, h: '&tapOnce LG(GRAVE)'}
   - {t: C, h: '&tapOnce LG(C)'}
   - {t: V, h: '&tapOnce LG(V)'}
-  - {t: B, h: '&tapOnce LC(B)'}
+  - B
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
   - N
